@@ -6,27 +6,29 @@
   <title>Epsilon Delta</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+          onload="renderMathInElement(document.body);"></script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Epsilon-delta_definition.svg/1200px-Epsilon-delta_definition.svg.png');
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: center;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
       color: #333;
     }
+
     header {
-      background: rgba(30, 136, 229, 0.85);
+      background-image: linear-gradient(to right, rgba(30, 136, 229, 0.8), rgba(66, 165, 245, 0.8)),
+                        url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Epsilon-delta_definition.svg/1200px-Epsilon-delta_definition.svg.png');
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
+
     header::after {
       content: "\03B5\2212\03B4";
       position: absolute;
@@ -36,12 +38,14 @@
       font-family: 'Cambria Math', serif;
       opacity: 0.6;
     }
+
     nav {
       display: flex;
       justify-content: center;
       background: #2196f3;
       padding: 0.75rem;
     }
+
     nav button {
       background: white;
       color: #2196f3;
@@ -52,17 +56,18 @@
       border-radius: 20px;
       transition: all 0.3s ease;
     }
+
     nav button:hover {
       background: #1976d2;
       color: white;
     }
+
     section {
       padding: 2rem 1rem;
       max-width: 1000px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
     }
+
     .subtopics {
       display: none;
       background: white;
@@ -72,13 +77,16 @@
       margin-top: 1rem;
       animation: fadeIn 0.5s ease;
     }
+
     ul {
       list-style-type: square;
       padding-left: 1.2rem;
     }
+
     ul ul {
       list-style-type: circle;
     }
+
     .upload-section {
       background: #fffde7;
       padding: 1.5rem;
@@ -86,12 +94,14 @@
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     textarea {
       width: 100%;
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
     .upload-section button {
       background: #4caf50;
       color: white;
@@ -101,9 +111,11 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
+
     .upload-section button:hover {
       background: #388e3c;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -111,6 +123,7 @@
       color: white;
       margin-top: 2rem;
     }
+
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(10px);}
       to {opacity: 1; transform: translateY(0);}
@@ -180,6 +193,7 @@
   </script>
 </body>
 </html>
+
 
 
 
