@@ -3,322 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduHub - Learn Something New</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Epsilon Delta</title>
   <style>
-    :root {
-      --bg-color: #f9fafb;
-      --text-color: #000;
-      --card-bg: #fff;
-      --header-bg: linear-gradient(90deg, #1e3a8a, #3b82f6);
-    }
-
-    body.dark {
-      --bg-color: #121212;
-      --text-color: #f1f1f1;
-      --card-bg: #1e1e1e;
-      --header-bg: linear-gradient(90deg, #0f172a, #334155);
-    }
-
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background: var(--header-bg);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    nav {
-      background-color: #1e40af;
-      padding: 0.75rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-
-    .search-container {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .search-container input {
-      padding: 0.6rem;
-      width: 50%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    .hero {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .content {
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    .course-card {
-      background-color: var(--card-bg);
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      width: 300px;
-      padding: 1.5rem;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .course-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-    }
-
-    .subtopics {
-      margin-top: 1rem;
-      padding-left: 1.2rem;
-      display: none;
-      text-align: left;
-    }
-
-    .subtopics ul {
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      list-style-type: disc;
+      background: #f0f2f5;
     }
-
-    .subtopics li {
-      margin: 5px 0;
-      transition: transform 0.2s;
-    }
-
-    .subtopics li:hover {
-      transform: scale(1.05);
-      color: #3b82f6;
-    }
-
-    footer {
-      background-color: #1e3a8a;
+    header {
+      background-color: #343a40;
       color: white;
+      padding: 1rem;
       text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #495057;
+      padding: 0.5rem;
+    }
+    nav button {
+      background: #6c757d;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    nav button:hover {
+      background: #adb5bd;
+    }
+    section {
+      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .subtopics {
+      display: none;
+      margin-top: 1rem;
+    }
+    .upload-section {
+      background: #ffffff;
       padding: 1rem;
       margin-top: 2rem;
-    }
-
-    .dark-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #111;
-      color: white;
-      padding: 10px 15px;
-      border: none;
       border-radius: 8px;
-      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-
-    #scrollTop {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #3b82f6;
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #343a40;
       color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 50%;
-      font-size: 16px;
-      cursor: pointer;
-      display: none;
-    }
-
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-
-    button {
-      margin-right: 5px;
-      margin-top: 5px;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 6px;
-      background-color: #2563eb;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #1d4ed8;
-    }
-
-    @media (max-width: 600px) {
-      .search-container input {
-        width: 90%;
-      }
-
-      .content {
-        flex-direction: column;
-        align-items: center;
-      }
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-
-  <button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
-
   <header>
-    <h1>📘 EduHub</h1>
-    <p>Learn something new every day.</p>
+    <h1>Epsilon Delta</h1>
+    <p>An engaging educational platform for Mathematics and Physics</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Courses</a>
-    <a href="#">Videos</a>
-    <a href="#">Resources</a>
-    <a href="#">Contact</a>
+    <button onclick="showSubject('math')">Mathematics</button>
+    <button onclick="showSubject('physics')">Physics</button>
   </nav>
 
-  <div class="search-container">
-    <input type="text" id="searchInput" onkeyup="searchTopics()" placeholder="Search for a topic...">
-  </div>
-
-  <section class="hero">
-    <h2>🚀 Explore Free Courses & Resources</h2>
-    <p>Interactive, beginner-friendly, and 100% free.</p>
-  </section>
-
-  <section class="content">
-    <div class="course-card" onclick="toggleSubtopics('math-topics')">
-      <i class="fas fa-calculator"></i>
-      <h3>Mathematics</h3>
-      <p>Understand numbers, patterns, algebra, geometry, and more.</p>
-      <div id="math-topics" class="subtopics">
-        <ul>
-          <li>Arithmetic</li>
-          <li>Algebra</li>
-          <li>Geometry</li>
-          <li>Trigonometry</li>
-          <li>Calculus</li>
-        </ul>
-      </div>
+  <section>
+    <div id="math" class="subtopics">
+      <h2>Mathematics</h2>
+      <ul>
+        <li>Arithmetic</li>
+        <li>Algebra</li>
+        <li>Calculus</li>
+        <li>Geometry</li>
+        <li>Number Theory</li>
+      </ul>
     </div>
 
-    <div class="course-card" onclick="toggleSubtopics('science-topics')">
-      <i class="fas fa-flask"></i>
-      <h3>Science</h3>
-      <p>Dive into physics, chemistry, biology, and fascinating experiments.</p>
-      <div id="science-topics" class="subtopics">
-        <ul>
-          <li>Physics</li>
-          <li>Chemistry</li>
-          <li>Biology</li>
-          <li>Earth Science</li>
-          <li>Environmental Science</li>
-        </ul>
-      </div>
+    <div id="physics" class="subtopics">
+      <h2>Physics</h2>
+      <p>Explore interactive simulations and concept explanations:</p>
+      <ul>
+        <li>Mechanics</li>
+        <li>Optics</li>
+        <li>Electromagnetism</li>
+        <li>Thermodynamics</li>
+        <li>Quantum Physics</li>
+      </ul>
+      <p><a href="https://phet.colorado.edu/" target="_blank">Try PhET Simulations</a></p>
     </div>
 
-    <div class="course-card">
-      <i class="fas fa-pencil-alt"></i>
-      <h3>📝 My Notes</h3>
-      <textarea id="myNotes" rows="6" placeholder="Write your ideas, summaries, or formulas..."></textarea>
-      <button onclick="saveNote()">💾 Save Note</button>
-      <button onclick="clearNote()">🗑️ Clear Note</button>
-    </div>
-
-    <div class="course-card">
-      <i class="fas fa-upload"></i>
-      <h3>📂 Upload Files</h3>
-      <input type="file" id="fileUploader" multiple />
-      <ul id="fileList" style="margin-top: 10px;"></ul>
+    <div class="upload-section">
+      <h3>Upload PDFs or Blog Content</h3>
+      <input type="file" accept="application/pdf" /><br /><br />
+      <textarea rows="5" cols="50" placeholder="Write your blog here..."></textarea><br />
+      <button onclick="alert('Feature under development. You can commit content through GitHub for now.')">Submit</button>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 EduHub. All rights reserved.
+    &copy; 2025 Epsilon Delta. All rights reserved.
   </footer>
 
-  <button id="scrollTop" onclick="scrollToTop()">↑</button>
-
   <script>
-    function toggleSubtopics(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    function showSubject(subject) {
+      document.getElementById("math").style.display = "none";
+      document.getElementById("physics").style.display = "none";
+      document.getElementById(subject).style.display = "block";
     }
-
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    window.onscroll = function () {
-      document.getElementById('scrollTop').style.display =
-        window.scrollY > 100 ? 'block' : 'none';
-    };
-
-    function searchTopics() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.course-card');
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(input) ? 'block' : 'none';
-      });
-    }
-
-    function saveNote() {
-      const note = document.getElementById('myNotes').value;
-      localStorage.setItem('edu_note', note);
-      alert('Note saved!');
-    }
-
-    function clearNote() {
-      if (confirm("Are you sure you want to delete your note?")) {
-        localStorage.removeItem('edu_note');
-        document.getElementById('myNotes').value = '';
-      }
-    }
-
-    function handleFiles(event) {
-      const files = event.target.files;
-      const list = document.getElementById('fileList');
-      list.innerHTML = '';
-      for (let i = 0; i < files.length; i++) {
-        const item = document.createElement('li');
-        item.textContent = files[i].name;
-        list.appendChild(item);
-      }
-    }
-
-    window.onload = function () {
-      const savedNote = localStorage.getItem('edu_note');
-      if (savedNote) document.getElementById('myNotes').value = savedNote;
-
-      document.getElementById('fileUploader').addEventListener('change', handleFiles);
-    };
   </script>
-
 </body>
 </html>
